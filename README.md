@@ -10,14 +10,14 @@ Link TOTVS sobre o Assunto: https://tdn.totvs.com/display/public/fluig/Templates
 Material resumo do funcionamento foi extraido deste link: https://willian.eti.br/enviando-e-mail-pelo-fluig/
 
 
-Resumo do funcionamento:
-1 - personalizar o Dataset para buscar os dados e mandar os resultados organizados para a estrutura da função notifier, que por sua vez chama o template postado no FLUIG;
-2 - personalizar o Template para receber as variaveis enviadas pelo DataSet, existem alguns limites associados as versões utilizadas de CSS, HTML, JAVASCRIPT e demais utilizadas dentro do ambiente FLUIG, exemplo disso: não consegui usar o codigo CSS de tabela zebrada, tive que usar o metodo antigo, para alternar as cores por linha;
+## :hammer: Resumo do funcionamento:
+1 - personalizar o Dataset para buscar os dados e mandar os resultados organizados para a estrutura da função notifier, que por sua vez chama o template postado no FLUIG;<br>
+2 - personalizar o Template para receber as variaveis enviadas pelo DataSet, existem alguns limites associados as versões utilizadas de CSS, HTML, JAVASCRIPT e demais utilizadas dentro do ambiente FLUIG, exemplo disso: não consegui usar o codigo CSS de tabela zebrada, tive que usar o metodo antigo, para alternar as cores por linha;<br>
 
-Postar Template de e-mail no FLUIG:
-1 - Vá em painel de controle do FLUIG;
-2 - Digite na pesquisa "Templates de email";
-3 - escolha o template ou edite se for o caso;
-4 - Caso seja novo digite um codigo identificador e uma descrição amigavél do template;
-5 - o codigo digitado é que deve ser usado no parâmetro  do notifier: notifier.notify(matricula, "<Template de e-mail>", <HashMap dos parametros>, ArrayList dos destinatarios, "text/html");
+<p> ## :hammer: Postar Template de e-mail no FLUIG:</p>
+1 - Vá em painel de controle do FLUIG;<br>
+2 - Digite na pesquisa "Templates de email"; <br>
+3 - escolha o template ou edite se for o caso;<br>
+4 - Caso seja novo digite um codigo identificador e uma descrição amigavél do template;<br>
+5 - o codigo digitado é que deve ser usado no parâmetro  do notifier: notifier.notify(matricula, "<Template de e-mail>", <HashMap dos parametros>, ArrayList dos destinatarios, "text/html");<br>
   
