@@ -19,5 +19,5 @@ Material resumo do funcionamento foi extraido deste link: https://willian.eti.br
 2 - Digite na pesquisa "Templates de email"; <br>
 3 - escolha o template ou edite se for o caso;<br>
 4 - Caso seja novo digite um codigo identificador e uma descrição amigavél do template;<br>
-5 - o codigo digitado é que deve ser usado no parâmetro  do notifier: notifier.notify(matricula, <codigo do Template de e-mail entre aspas duplas>, <HashMap dos parametros>, ArrayList dos destinatarios, "text/html");<br>
+5 - o codigo digitado é que deve ser usado no parâmetro  do notifier: notifier.notify(matricula, codigo do Template de e-mail entre aspas duplas, HashMap dos parametros, ArrayList dos destinatarios, "text/html");<br>
   
