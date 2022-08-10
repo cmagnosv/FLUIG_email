@@ -20,3 +20,4 @@ Postar Template de e-mail no FLUIG:
 3 - escolha o template ou edite se for o caso;
 4 - Caso seja novo digite um codigo identificador e uma descrição amigavél do template;
 5 - o codigo digitado é que deve ser usado no parâmetro  do notifier: notifier.notify(matricula, "<Template de e-mail>", <HashMap dos parametros>, ArrayList dos destinatarios, "text/html");
+  
