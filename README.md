@@ -4,10 +4,13 @@ Enviando e-mail de Gestão de Contratos RM no FLUIG via Dataset
 Este projeto propôe mostrar o uso da função notifier para enviar e-mail de controle via Dataset, optou-se em usar desta forma, para podermos criar mecanismo de envio automatico de uma forma agendada, neste exemplo para enviar avisos aos gestores de contrato do RM, informando-os que os contratos sob a sua gestão, estão encerrando(o prazo definido aqui foi 30 dias antes do fim de contrato), foi agendado esta tarefa uma vez ao dia.
 
 O FLUIG utiliza para os templates o FreeMarker para prover o HTML dinâmico: https://freemarker.apache.org/
-Link TOTVS sobre o Assunto: https://tdn.totvs.com/display/public/fluig/Templates+de+e-mail+personalizado
-material resumo do funcionamento foi extraido deste link: https://willian.eti.br/enviando-e-mail-pelo-fluig/
 
-resumo do funciomaneto:
+Link TOTVS sobre o Assunto: https://tdn.totvs.com/display/public/fluig/Templates+de+e-mail+personalizado
+
+Material resumo do funcionamento foi extraido deste link: https://willian.eti.br/enviando-e-mail-pelo-fluig/
+
+
+Resumo do funcionamento:
 1 - personalizar o Dataset para buscar os dados e mandar os resultados organizados para a estrutura da função notifier, que por sua vez chama o template postado no FLUIG;
 2 - personalizar o Template para receber as variaveis enviadas pelo DataSet, existem alguns limites associados as versões utilizadas de CSS, HTML, JAVASCRIPT e demais utilizadas dentro do ambiente FLUIG, exemplo disso: não consegui usar o codigo CSS de tabela zebrada, tive que usar o metodo antigo, para alternar as cores por linha;
 
