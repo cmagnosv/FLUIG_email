@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+table tbody tr:nth-child(2n) {
+    background: #ccc;
+}
+</style>
+</head>
+<body>
+<p></p>
+Prezado(a) ${gestao!''},
+<p></p>
+Conforme consta em nosso Sistema de Gestão de Contratos, segue a Lista de contratos sob a sua gestão ${corpo!''}:
+<p></p>
+<#if contratos??> 
+<table style="border-collapse: collapse; width: 100%; height: 36px;" border="1">
+<tr style="height: 18px; text-align: center; background-color: #0000ff; height: 18px;">
+<td style="width: 4%;"></td>
+<td style="width: 12%;"><span style="color: #ffffff;"><strong>Contrato</strong></span></td>
+<td style="width: 12%;"><span style="color: #ffffff;"><strong>Data Inicio</strong></span></td>
+<td style="width: 12%;"><span style="color: #ffffff;"><strong>Data Fim</strong></span></td>
+<td style="width: 17%;"><span style="color: #ffffff;"><strong>Gestor</strong></span></td>
+<td style="width: 17%;"><span style="color: #ffffff;"><strong>Fornecedor</strong></span></td>
+<td style="width: 25%;"><span style="color: #ffffff;"><strong>Prazo para encerramento (dias)</strong></span></td>
+<td style="width: 10%;"><span style="color: #ffffff;"><strong>Prazo de execução (meses)</strong></span></td>
+<td style="width: 14%;"><span style="color: #ffffff;"><strong>Observações</strong></span></td>
+</tr>
+<tbody>
+<#assign row=0>
+<#list contratos as contrato>
+<tr style='height: 18px; <#if (row % 2) == 0> background-color: #D0E4F5 </#if>'>
+<td style="width: 4%; height: 18px;">${row!''} <br></td>
+<td style="width: 12%; height: 18px;">${contrato.contrato!''} <br></td>
+<td style="width: 17%; height: 18px;">${contrato.dataInicio!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.dataFim!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.gestor!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.fornecedor!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.diasFimContrato!''}</td>
+<td style="width: 25%; height: 18px;">${contrato.tempoContrato!''}</td>
+<td style="width: 25%; height: 18px;">${contrato.obs!''}</td>
+<#assign row = row + 1>
+</tr>
+</#list>
+</tbody>
+</table>
+<p></p>
+Atenciosamente, <p></p>
+Gestão de Contratos
+
+<br>
+<h5>By UTIC/MA(Carlos Magno)</h5>
+</#if>
+</body>
+</html>

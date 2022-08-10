@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<p></p>
+Prezado(a) ${gestor!''},
+<p></p>
+Conforme consta em nosso Sistema de Gestão de Contratos, segue a Lista de contratos sob a sua gestão ${corpo!''}:
+<p></p>
+<#if contratos??> 
+<table style="border-collapse: collapse; width: 100%; height: 36px;" border="1">
+<tr style="height: 18px; text-align: center; background-color: #0000ff; height: 18px;">
+<td style="width: 12%;"><span style="color: #ffffff;"><strong>Contrato/Gestor</strong></span></td>
+<td style="width: 17%;"><span style="color: #ffffff;"><strong>Fornecedor</strong></span></td>
+<td style="width: 17%;"><span style="color: #ffffff;"><strong>Período</strong></span></td>
+<td style="width: 25%;"><span style="color: #ffffff;"><strong>Objeto</strong></span></td>
+<td style="width: 14%;"><span style="color: #ffffff;"><strong>Valores do Contratado</strong></span></td>
+<td style="width: 15%;"><span style="color: #ffffff;"><strong>Observações do contrato</strong></span></td>
+</tr>
+<#assign row=0>
+<#list contratos as contrato>
+<tr style="height: 18px; <#if (row % 2) == 0> background-color: #D0E4F5 </#if>">
+<td style="width: 12%; height: 18px;">${contrato.contrato!''} <br> ${gestor!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.fornecedor!''}</td>
+<td style="width: 17%; height: 18px;">${contrato.periodo!''}, <br><#if contrato.tipoTempoContrato == "1"> <strong><font color="red"> </#if> ${contrato.tempoContrato!''} <#if contrato.tipoTempoContrato =="1"></font> </strong> </#if></td>
+<td style="width: 25%; height: 18px;">${contrato.objeto!''}</td>
+<td style="width: 14%; height: 18px;">Global: ${contrato.valorcontrato!''} <br> Pago: ${contrato.valorpago!''} <br> Saldo: ${contrato.saldo!''}</td>
+<td style="width: 15%; height: 18px;">${contrato.obs!''}</td>
+<#assign row = row + 1>
+</tr>
+</#list>
+</table>
+<p></p>
+Atenciosamente, <p></p>
+Gestão de Contratos
+</#if>
+</body>
+</html>
