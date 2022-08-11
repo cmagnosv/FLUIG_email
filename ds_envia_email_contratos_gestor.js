@@ -46,7 +46,7 @@ try {
 
     }
 			gestor = datasetDs_RmContratos.getValue(j, "GERENTE");
-			mailGestor = datasetDs_RmContratos.getValue(j, "CODUSUARIO")+"@ma.sebrae.com.br";
+			mailGestor = datasetDs_RmContratos.getValue(j, "CODUSUARIO")+"@mail.com.br";
 		}
 	
 	 var obs="";
