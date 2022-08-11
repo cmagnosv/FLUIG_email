@@ -15,7 +15,7 @@ try {
 	var contratosList = new java.util.ArrayList();
 	
 	var gestor =  "ola";
-	var nomeGestor= "ola";
+	var mailGestor= "ola";
 	
 	var constraintDs_RmContratos1 = DatasetFactory.createConstraint('TIPOFIMCONTRATO', '1', '1', ConstraintType.MUST);
 	var constraintDs_RmContratos2 = DatasetFactory.createConstraint('NATUREZACONTRATO', 'R', 'R', ConstraintType.MUST_NOT);
@@ -38,7 +38,7 @@ try {
 				parametros.put("corpo", "e que encerram em menos de 30 dias para o encerramento");
 				//destinatarios
 				var destinatarios = new java.util.ArrayList();
-				destinatarios.add(datasetDs_RmContratos.getValue(j, "CODUSUARIO")+"@email.com.br");
+				destinatarios.add(mailGestor);
 				notifier.notify(matricula, "email_contratos", parametros, destinatarios, "text/html");
        parametros.clear();
         contratosList = new java.util.ArrayList();
@@ -46,6 +46,7 @@ try {
 
     }
 			gestor = datasetDs_RmContratos.getValue(j, "GERENTE");
+			mailGestor = datasetDs_RmContratos.getValue(j, "CODUSUARIO")+"@ma.sebrae.com.br";
 		}
 	
 	 var obs="";
